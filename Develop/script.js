@@ -24,6 +24,23 @@ letters2 = letters.map(toUpper);
 
 var generateBtn = document.querySelector("#generate");
 
+generateBtn.addEventListener("click", function() {
+  password = generatePassword();
+  document.getElementById("password").placeholder = password;
+
+});
+
+function generatePassword() {
+
+enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
+
+if (!enter) {
+  alert("This needs a value");
+
+} else if (enter < 8 || enter > 128)
+
+
+
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var dogName = prompt ("What is your dogs name?") 
