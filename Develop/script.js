@@ -2,8 +2,10 @@
 var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var dogName = prompt ("What is your dogs name?") 
+  var carYear = prompt( "From what year is your car?")
   console.log (dogName)
   return dogName
+
 }
 
 
