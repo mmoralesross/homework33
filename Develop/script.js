@@ -37,29 +37,88 @@ enter = parseInt(prompt("How many characters would you like your password? Choos
 if (!enter) {
   alert("This needs a value");
 
-} else if (enter < 8 || enter > 128)
+} else if (enter < 8 || enter > 128));
 
+} else { 
 
+  numbers = confirm ("Will this contain numbers?");
+  characters = confirm ("Will this contain special characters?");
+  uppercase = confirm ("Will this contain uppercase letters?");
 
-var generateBtn = document.querySelector("#generate");
-function generatePassword() {
-  var dogName = prompt ("What is your dogs name?") 
-  var carYear = prompt( "From what year is your car?")
-  console.log (dogName)
-  return dogName
+};
 
-}
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-
-  passwordText.value = password;
+if (!character && !number && !uppercases && !lowercases) {
+  choices = alert("You must choose a criteria!");
 
 }
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+else if (characters &&numbers &&uppercases &&lowercases) {
+  choices = character.concat(number, letters, letters2);
+}
+
+else if (characters && numbers && uppercases) {
+  choices = character.concat(number, letters2);
+}
+else if (characters && numbers && lowercases) {
+  choices = character.concat(number,letters);
+{
+else if (characters && lowercases && uppercases) {
+  choices = character.concat(letters, letters2);
+{
+  else if (numbers && lowercases && uppercases) {
+    choices = characters.concat(letteres, letters2);
+}
+
+//
+
+else if (characters && numbers) {
+  choices = character.concat(number);
+}
+else if (characters && lowercases) {
+  choices = character.concat(letters);
+ {
+else if (characters && uppercases) {
+  choices = character.concat(letters2);
+ {
+ else if (lowercases && numbers) {
+   choices = letters.concat(number);
+ }
+ else if (lowercases && uppercases) {
+   choices = letters.concat(letters2);
+ }
+ else if (numbers && uppercase) {
+   choices = number.concat(letters2);
+ }       
+  
+ //
+
+ else if (characters) {
+   choices = character;
+ }
+else if (numbers) {
+  choices = number;
+}
+else if (lowercases) {
+  choices = letters;
+}
+
+else if (uppercases){
+  choices = space.concat(letters2);
+
+};
+
+var password = [];
+
+for (var i=0 i < enter i++) {
+  var choices2 = choices[Math.floor(Math.random () * choices.length)];
+  password.push(choices2);
+}
+
+var password = password.join("");
+UserInput(password);
+return password;
+
+function UserInput(password) {
+  document.getElementById("password").textContent = password;
+
+};
