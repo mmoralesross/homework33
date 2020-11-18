@@ -77,10 +77,10 @@ else if (characters && numbers) {
 }
 else if (characters && lowercases) {
   choices = character.concat(letters);
- {
+}
 else if (characters && uppercases) {
   choices = character.concat(letters2);
- {
+}
  else if (lowercases && numbers) {
    choices = letters.concat(number);
  }
